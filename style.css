@@ -62,8 +62,14 @@ input[type="number"]::-webkit-inner-spin-button {
 .btn.operator {
   background: orange;
 }
-.btn.zero {
+
+.btn.clear {
+  background: rgb(188, 185, 185);
+  color: black;
+}
+
+/* .btn.zero {
   grid-column: span 2;
   width: 150px;
   border-radius: 30px;
-}
+} */
