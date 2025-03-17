@@ -2,68 +2,85 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
-  background-color: #222;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
   color: white;
   text-align: center;
   font-size: 2.5rem;
+  margin-bottom: 20px;
 }
+
 .calculator {
-  width: 350px;
-  background: black;
-  border-radius: 20px;
-  padding: 22px;
+  width: 380px;
+  background: #222;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
+
 input {
   width: 100%;
-  height: 60px;
+  height: 70px;
   background: #333;
   color: white;
   text-align: right;
   font-size: 2.5rem;
   border: none;
   border-radius: 10px;
+  padding: 10px;
+  outline: none;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 6px;
-}
 ::placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
+
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  margin-top: 20px;
-}
-.btn {
-  width: 60px;
-  height: 60px;
-  background: #444;
-  color: white;
-  font-size: 1.5rem;
-  border: none;
-  margin: auto;
-  border-radius: 50%;
-  cursor: pointer;
+  gap: 15px;
+  margin-top: 25px;
 }
 
-.btn.start {
+.btn {
+  width: 75px;
+  height: 75px;
+  background: #444;
+  color: white;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background: #555;
+  transform: scale(1.1);
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.btn.start,
+.btn.clear {
   background: rgb(188, 185, 185);
   color: black;
 }
 
 .btn.operator {
   background: orange;
-}
-
-.btn.clear {
-  background: rgb(188, 185, 185);
-  color: black;
+  color: white;
 }
